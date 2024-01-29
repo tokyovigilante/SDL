@@ -1241,3 +1241,4 @@ SDL_DYNAPI_PROC(bool,SDL_WaitAndAcquireGPUSwapchainTexture,(SDL_GPUCommandBuffer
 #ifndef SDL_DYNAPI_PROC_NO_VARARGS
 SDL_DYNAPI_PROC(bool,SDL_RenderDebugTextFormat,(SDL_Renderer *a,float b,float c,SDL_PRINTF_FORMAT_STRING const char *d,...),(a,b,c,d),return)
 #endif
+SDL_DYNAPI_PROC(SDL_AppResult,SDL_IterateMainCallbacks,(bool a),(a),return)

@@ -519,6 +519,25 @@ extern SDL_DECLSPEC int SDLCALL SDL_RunApp(int argc, char *argv[], SDL_main_func
  */
 extern SDL_DECLSPEC int SDLCALL SDL_EnterAppMainCallbacks(int argc, char *argv[], SDL_AppInit_func appinit, SDL_AppIterate_func appiter, SDL_AppEvent_func appevent, SDL_AppQuit_func appquit);
 
+/**
+ * Directly iterate the application's callback functions.
+ *
+ * Generally, you should not call this function directly. This should only
+ * be called if you are using an external event loop to drive SDL.
+ *
+ * Not all platforms use this, it's actual use is hidden in a magic
+ * header-only library, and you should not call this directly unless you
+ * _really_ know what you're doing.
+ *
+ * \param pump_events whether to call SDL_PumpEvents() before calling the
+ *                  callbacks, should generally be SDL_TRUE.
+ * \returns standard Unix main return value
+ *
+ * \threadsafety It is not safe to call this other than on the main thread.
+ *
+ * \since This function is available since SDL 3.0.0.
+ */
+extern SDL_DECLSPEC SDL_AppResult SDLCALL SDL_IterateMainCallbacks(bool pump_events);
 
 #if defined(SDL_PLATFORM_WINDOWS)
 

@@ -627,6 +627,7 @@
 #define SDL_IsMouseHaptic SDL_IsMouseHaptic_REAL
 #define SDL_IsTV SDL_IsTV_REAL
 #define SDL_IsTablet SDL_IsTablet_REAL
+#define SDL_IterateMainCallbacks SDL_IterateMainCallbacks_REAL
 #define SDL_JoystickConnected SDL_JoystickConnected_REAL
 #define SDL_JoystickEventsEnabled SDL_JoystickEventsEnabled_REAL
 #define SDL_KillProcess SDL_KillProcess_REAL
